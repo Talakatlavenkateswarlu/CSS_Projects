@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img slide on Hover</title>
+    <style>
+        body{
+            background-color: darkslategrey;
+        }
+        .container{
+            width:300px;
+            height: 455px;
+            margin: 100px auto;
+            box-shadow: 0 10px 10px black;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+           
+        }
+
+        .container img{
+            width: inherit;
+            height: inherit;
+            
+            transition: all 0.5s;
+
+        }
+        .container .content{
+            position: absolute;
+            bottom: -40%;
+            background:linear-gradient(45deg,blueviolet,deeppink);
+            color: white;
+            font-family:Arial, Helvetica, sans-serif;
+            padding: 10px;
+            font-size: 17px;
+            transition: all 0.5s;
+        }
+        .container:hover .content{
+            bottom: 0%;
+
+        }
+        .container:hover img{
+            transform:translateY(-8%);
+        }
+
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="slidehover.jpg" alt="woman image">
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore hic qui, dolore, adipisci deleniti rerum amet perferendis ratione officia tenetur corporis expedita incidunt itaque laborum?</p>
+
+        </div>
+    </div>
+</body>
+</html>

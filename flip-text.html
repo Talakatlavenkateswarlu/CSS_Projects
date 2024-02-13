@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image Hover Flip Text</title>
+    <style>
+        body{
+            background-color: rgb(50, 80, 81);
+        }
+        .container{
+            width: 450px;
+            height: 300px;
+            margin: 100px auto;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+
+        }
+        .container img{
+            width: inherit;
+            height: inherit;
+            box-shadow: 10px solid black;
+            border-radius: 10px;
+            transition: all 0.5s;
+            
+        }
+        .container:hover img{
+            transform: scale(1.2,1.2);
+        }
+        .container .content{
+            position: absolute;
+            top: 0;
+            color: whitesmoke;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgba(0, 0, 0, 0.4);
+            width: 50%;
+            height: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            transform: perspective(400px) rotateY(90deg);
+            transform-origin: left;
+            transition: all 0.5s;
+            border-radius: 10px;
+
+        }
+        .container:hover .content{
+            transform: perspective(400px) rotateY(0deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="flip.jpg" alt="baby">
+        <div class="content">
+            <h2>Children</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ipsa quis provident iusto autem inventore officiis dicta eos. Maiores, accusamus!</p>
+
+        </div>
+    </div>
+    
+</body>
+</html>
